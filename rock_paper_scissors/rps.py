@@ -2,8 +2,12 @@
 
 import sys
 
+plays = ['rock', 'paper', 'scissors']
+
 def rock_paper_scissors(n):
-  pass 
+  if n == 0:
+    return [[]]
+  return [[play] + permutations for play in plays for permutations in rock_paper_scissors(n - 1)]
 
 
 if __name__ == "__main__":
